@@ -11,3 +11,15 @@ build/
 captures/
 .externalNativeBuild/
 .cxx/
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+
+# Android Studio temporary files
+.idea/workspace.xml
+.idea/caches/
+.idea/libraries/
