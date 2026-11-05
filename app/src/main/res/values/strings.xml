@@ -1,3 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Excess Baggage Calculator</string>
+
+    <string name="about_title">ABOUT THE APP</string>
+    <string name="about_subtitle">Learn more about this application</string>
+    <string name="application_information">APPLICATION INFORMATION</string>
+    <string name="application_name">Excess Baggage Fee Calculator</string>
+    <string name="application_description">This application calculates excess baggage charges and includes the assumed 8% service tax.</string>
+    <string name="developer_details">DEVELOPER DETAILS</string>
+    <string name="student_details">Name: MOHAMAD DENNIS LUQMAN\nStudent Number: 2025485938\nGroup: RSC2515B\nProgramme Code: CS251\nCourse: ICT602</string>
+    <string name="project_website">PROJECT WEBSITE</string>
+    <string name="github_description">View the source code and project details on GitHub.</string>
+    <string name="open_github">Open Project on GitHub</string>
+    <string name="copyright_notice">© 2026 Excess Baggage Calculator. All rights reserved.</string>
+    <string name="back_to_calculator">Back to Calculator</string>
 </resources>

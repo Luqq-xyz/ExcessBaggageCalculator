@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ABOUT THE APP"
+            android:text="@string/about_title"
             android:textColor="#183B65"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="18dp"
-            android:text="Learn more about this application"
-            android:textColor="#64748B"
+            android:text="@string/about_subtitle"
+            android:textColor="#475569"
             android:textSize="14sp" />
 
         <!-- Application information -->
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="APPLICATION INFORMATION"
+                android:text="@string/application_information"
                 android:textColor="#183B65"
                 android:textSize="13sp"
                 android:textStyle="bold"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:text="Excess Baggage Fee Calculator"
+                android:text="@string/application_name"
                 android:textColor="#183B65"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="5dp"
-                android:text="This application estimates excess baggage weight, calculates the additional baggage charge, and adds the assumed 8% service tax."
+                android:text="@string/application_description"
                 android:textColor="#334155"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DEVELOPER DETAILS"
+                android:text="@string/developer_details"
                 android:textColor="#183B65"
                 android:textSize="13sp"
                 android:textStyle="bold"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:lineSpacingExtra="7dp"
-                android:text="Name: MOHAMAD DENNIS LUQMAN\nStudent Number: 2025485938\nGroup: RSC2515B\nProgramme Code: CS251\nCourse: ICT602"
+                android:text="@string/student_details"
                 android:textColor="#334155"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -112,7 +112,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PROJECT WEBSITE"
+                android:text="@string/project_website"
                 android:textColor="#183B65"
                 android:textSize="13sp"
                 android:textStyle="bold"
@@ -122,17 +122,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="View the source code and project details on GitHub."
-                android:textColor="#64748B"
+                android:text="@string/github_description"
+                android:textColor="#475569"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/websiteLink"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
+                android:minWidth="220dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
                 android:backgroundTint="#183B65"
-                android:text="Open Project on GitHub"
+                android:text="@string/open_github"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
@@ -144,18 +148,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="© 2026 Excess Baggage Calculator. All rights reserved."
-            android:textColor="#64748B"
+            android:text="@string/copyright_notice"
+            android:textColor="#475569"
             android:textSize="12sp" />
 
         <Button
             android:id="@+id/backButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
+                android:minWidth="220dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center_horizontal"
             android:layout_marginTop="18dp"
             android:layout_marginBottom="12dp"
             android:backgroundTint="#6651A5"
-            android:text="Back to Calculator"
+            android:text="@string/back_to_calculator"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
