@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
         calculateButton = findViewById(R.id.calculateButton);
         resetButton = findViewById(R.id.resetButton);
+        Button shareButton = findViewById(R.id.shareButton);
 
         String[] ticketClasses = {"Economy", "Business"};
 
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         calculateButton.setOnClickListener(v -> calculateFee());
         resetButton.setOnClickListener(v -> resetForm());
+        shareButton.setOnClickListener(v -> shareApplication());
 
         Button aboutButton = findViewById(R.id.aboutButton);
         aboutButton.setOnClickListener(v -> {
@@ -188,6 +190,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         resultText.setText(styledSummary);
+    }
+
+
+    private void shareApplication() {
+        String shareText = "Check out the Excess Baggage Calculator app! "
+                + "View the project on GitHub: "
+                + "https://github.com/Luqq-xyz/ExcessBaggageCalculator";
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Excess Baggage Calculator");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+        startActivity(Intent.createChooser(shareIntent, "Share application via"));
     }
 
     private void resetForm() {
