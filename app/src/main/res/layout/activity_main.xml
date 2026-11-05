@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6FB">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#183B65"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F6FB"
@@ -11,24 +26,24 @@
         android:orientation="vertical"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:paddingTop="32dp"
+        android:paddingTop="20dp"
         android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="EXCESS BAGGAGE"
+            android:text="Calculate Your Baggage Fee"
             android:textColor="#183B65"
-            android:textSize="25sp"
+            android:textSize="21sp"
             android:textStyle="bold"
-            android:letterSpacing="0.02" />
+            android:letterSpacing="0.01" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="20dp"
-            android:text="Calculate your additional baggage fee"
+            android:text="Estimate your additional baggage charges easily."
             android:textColor="#64748B"
             android:textSize="14sp" />
 
@@ -178,18 +193,6 @@
             android:textSize="14sp" />
 
 
-        <Button
-            android:id="@+id/shareButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="9dp"
-            android:backgroundTint="#183B65"
-            android:text="Share This App"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -202,3 +205,4 @@
 
     </LinearLayout>
 </ScrollView>
+</LinearLayout>

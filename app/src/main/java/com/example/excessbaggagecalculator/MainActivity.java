@@ -3,6 +3,8 @@ package com.example.excessbaggagecalculator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.Window;
+import android.view.MenuItem;
+import android.view.Menu;
 import android.os.Bundle;
 import android.graphics.Typeface;
 import android.text.SpannableString;
@@ -19,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
 
@@ -35,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Use a light status bar with dark icons to match the screen background.
+        // Match the status bar to the Toolbar and use light status icons.
         Window window = getWindow();
+        WindowCompat.setDecorFitsSystemWindows(window, true);
         window.setStatusBarColor(Color.parseColor("#F3F6FB"));
 
         WindowInsetsControllerCompat controller =
@@ -45,13 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.mainToolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Baggage Calculator");
+        }
+
         weightInput = findViewById(R.id.weightInput);
         rateInput = findViewById(R.id.rateInput);
         classSpinner = findViewById(R.id.classSpinner);
         resultText = findViewById(R.id.resultText);
         calculateButton = findViewById(R.id.calculateButton);
         resetButton = findViewById(R.id.resetButton);
-        Button shareButton = findViewById(R.id.shareButton);
 
         String[] ticketClasses = {"Economy", "Business"};
 
@@ -67,13 +76,29 @@ public class MainActivity extends AppCompatActivity {
 
         calculateButton.setOnClickListener(v -> calculateFee());
         resetButton.setOnClickListener(v -> resetForm());
-        shareButton.setOnClickListener(v -> shareApplication());
 
         Button aboutButton = findViewById(R.id.aboutButton);
         aboutButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem shareItem = menu.add(Menu.NONE, 1, Menu.NONE, "Share");
+        shareItem.setIcon(android.R.drawable.ic_menu_share);
+        shareItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == 1) {
+            shareApplication();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void calculateFee() {
