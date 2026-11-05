@@ -16,7 +16,7 @@ public class AboutActivity extends AppCompatActivity {
         TextView websiteLink = findViewById(R.id.websiteLink);
         Button backButton = findViewById(R.id.backButton);
 
-        String projectUrl = "https://github.com/";
+        String projectUrl = "https://github.com/Luqq-xyz/ExcessBaggageCalculator";
 
         websiteLink.setOnClickListener(v -> {
             android.content.Intent intent =
